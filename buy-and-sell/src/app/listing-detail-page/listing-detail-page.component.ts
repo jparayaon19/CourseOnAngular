@@ -11,6 +11,13 @@ import { Listing } from '../types';
   styleUrl: './listing-detail-page.component.css'
 })
 export class ListingDetailPageComponent implements OnInit {
+  //I was getting an error in here where listing was getting the 
+  //property "listing" has no initializer code. Thanks to Hoshiyar
+  //Singh Digari on the Q&A section, I learned that the reason it is
+  //giving the error is that the listing variable doesn't have a value
+  //till runtime. Adding a ? after a variable name tells Angular that 
+  // the variable is optional and doesn't need to be defined during compile time. 
+  
   listing?: Listing;
 
   constructor(
