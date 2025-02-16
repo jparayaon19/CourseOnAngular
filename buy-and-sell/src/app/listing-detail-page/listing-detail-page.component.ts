@@ -11,11 +11,10 @@ import { Listing } from '../types';
   styleUrl: './listing-detail-page.component.css'
 })
 export class ListingDetailPageComponent implements OnInit {
-  listing: Listing | undefined;
+  listing?: Listing;
 
   constructor(
-    private route: ActivatedRoute,
-
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
